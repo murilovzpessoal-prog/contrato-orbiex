@@ -1,0 +1,65 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Luz prateada/champagne na face esquerda do pico maior -->
+    <linearGradient id="alpLeftBright" x1="12" y1="84" x2="50" y2="19" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#cfd3da" />
+      <stop offset="52%" stop-color="#f5f5f7" />
+      <stop offset="85%" stop-color="#fff4d2" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+
+    <!-- Face chanfrada inferior do pico esquerdo com reflexo dourado sutil -->
+    <linearGradient id="alpLeftBevel" x1="6" y1="85" x2="49" y2="36" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9ca3af" />
+      <stop offset="45%" stop-color="#d4af37" />
+      <stop offset="100%" stop-color="#f7e3a1" />
+    </linearGradient>
+
+    <!-- Face direita em titânio escuro do pico maior -->
+    <linearGradient id="alpRightDark" x1="50" y1="19" x2="66" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d4d7de" />
+      <stop offset="28%" stop-color="#6b7280" />
+      <stop offset="100%" stop-color="#374151" />
+    </linearGradient>
+
+    <!-- Pico menor (M): faces iluminadas -->
+    <linearGradient id="alpSubLight" x1="28" y1="83" x2="72" y2="45" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d1d5db" />
+      <stop offset="55%" stop-color="#f9fafb" />
+      <stop offset="100%" stop-color="#f6e3a8" />
+    </linearGradient>
+
+    <!-- Pico menor (M): faces sombreadas em ouro/grafite -->
+    <linearGradient id="alpSubGold" x1="50" y1="52" x2="78" y2="78" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#cbd5e1" />
+      <stop offset="45%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#92600e" />
+    </linearGradient>
+
+    <filter id="alpGlow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="0.8" stdDeviation="1.4" flood-color="#000000" flood-opacity="0.55" />
+    </filter>
+  </defs>
+
+  <g filter="url(#alpGlow)">
+    <!-- PICO MAIOR ESQUERDO -->
+    <!-- Rampa principal iluminada -->
+    <polygon points="4,86 50,18 50,36.5 26,68" fill="url(#alpLeftBright)" />
+    <!-- Chanfro interno dourado/metálico -->
+    <polygon points="4,86 26,68 28.5,71.5" fill="url(#alpLeftBevel)" />
+    <!-- Rampa direita em titânio -->
+    <polygon points="50,18 67.5,43 61.5,52.5 50,36.5" fill="url(#alpRightDark)" />
+
+    <!-- PICO DUPLO INFERIOR (M) -->
+    <!-- Subida esquerda -->
+    <polygon points="26.5,84 50,50 50,60.5" fill="url(#alpSubLight)" />
+    <!-- Descida central esquerda -->
+    <polygon points="50,50 58.8,61.5 58,73.5 50,60.5" fill="url(#alpSubGold)" />
+    <!-- Subida central direita -->
+    <polygon points="58.8,61.5 71.5,45 71.5,58.5 58,73.5" fill="url(#alpSubLight)" />
+    <!-- Descida final direita -->
+    <polygon points="71.5,45 96.5,85.5 71.5,58.5" fill="url(#alpRightDark)" />
+    <!-- Reflexo dourado sob a aba direita -->
+    <polygon points="71.5,58.5 96.5,85.5 78,71" fill="url(#alpSubGold)" />
+  </g>
+</svg>
